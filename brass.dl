@@ -1,0 +1,57 @@
+.type node <: symbol
+.type city <: node
+.type market <: node
+.type player <: symbol
+.type factory <: symbol
+.type boolean <: number
+
+.decl boats(Location1:node, Location2:node, Player:player)
+.input boats(IO=sqlite, dbname="facts.db")
+
+.decl canals(Location1:node, Location2:node)
+.input canals(IO=sqlite, dbname="facts.db")
+
+.decl factories(Location:city, Ordinal:number, Type:factory, Level:number, Coal:number, Iron:number, Beer:number, BeerPrice:number, Player:player, flipped:boolean)
+.input factories(IO=sqlite, dbname="facts.db")
+
+.decl slots(Location:city, Ordinal:number, Type:factory)
+.input slots(IO=sqlite, dbname="facts.db")
+
+.decl inventory(Type:factory, Level:number, Quantity:number, Price:number, CoalPrice:number, IronPrice:number, CoalProvided:number, IronProvided:number, BeerPrice:number, BeerProvided:number, CanDevelop:number, Player:player)
+.input inventory(IO=sqlite, dbname="facts.db")
+
+.decl players(Order:number, Money:number, Player:player)
+.input players(IO=sqlite, dbname="facts.db")
+
+.decl cards(Location:symbol, Industry1:symbol, Industry2:symbol, AllIndustries:number, AllLocations:number, Player:player)
+.input cards(IO=sqlite, dbname="facts.db")
+
+.decl has_industry_in_city(Player:player, Location:city)
+has_industry_in_city(Player, Location) :- factories(Location, _, _, _, _, _, _, _, Player, _).
+
+.decl player_network(Player:player, Location:node)
+player_network(Player, Location) :- boats(Location, _, Player).
+player_network(Player, Location) :- boats(_, Location, Player).
+player_network(Player, Location) :- has_industry_in_city(Player, Location).
+.output player_network(IO=stdout, delimiter="\t")
+
+.decl can_place_boat(Player:player, Location1:node, Location2:node)
+can_place_boat(Player, Location1, Location2) :- player_network(Player, Location1), !boats(Location1, Location2, _), canals(Location1, Location2), players(_, M, Player), M > 2.
+.output can_place_boat(IO=stdout, delimiter="\t")
+
+.decl can_place_factory_cost(Player:player, Location:city, Type:factory, Level:number)
+can_place_factory_cost(Player, Location, Type, Level) :- player_network(Player, Location),
+                                            !factories(Location, Ordinal, Type, _, _, _, _, _, _, _),
+                                            inventory(Type, Level, Q, Price, _, _, _, _, _, _, _, Player),
+                                            slots(Location, Ordinal, Type),
+                                            players(_, M, Player),
+                                            M > Price -1,
+                                            Q > 0.
+
+.decl can_place_factory(Player:player, Location:city, Type:factory, Level:number)
+can_place_factory(Player, Location, Type, Level) :- can_place_factory_cost(Player, Location, Type, Level),
+                                                             cards(Location, _, _, _, _, Player).
+can_place_factory(Player, Location, Type, Level) :- can_place_factory_cost(Player, Location, Type, Level),
+                                                             cards(_, _, _, _, 1, Player).
+.output can_place_factory(IO=stdout, delimiter="\t")
+
