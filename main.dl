@@ -1,0 +1,11 @@
+.decl canal(x:symbol, y:symbol)
+.input canal(IO=file, filename="canal_map.csv", delimiter=",", headers=false)
+
+.decl path(x:symbol, y:symbol)
+.output path(IO=file, filename="canal_path.csv", delimiter=",", headers=false)
+
+path(x, y) :- canal(x, y).
+path(x, y) :- canal(y, x).
+path(x, y) :- canal(x, z), canal(z, y).
+path(x, y) :- canal(y, z), canal(z, x).
+
