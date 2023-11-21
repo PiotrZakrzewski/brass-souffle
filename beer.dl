@@ -1,0 +1,33 @@
+
+.decl has_beer(Location:symbol)
+has_beer("Birmingham").
+
+.decl is_connected(Location1:symbol, Location2:symbol)
+// simplified fact-based implementation, only 1-hop connections
+// for a more complete example of is_connected graph rule
+// see https://souffle-lang.github.io/tutorial
+is_connected("Birmingham", "Birmingham").
+is_connected("Birmingham", "Nuneaton").
+is_connected("Nuneaton", "Birmingham").
+
+// ownership facts simplified from Brass Birmingham rules perspective
+// in brass players own only given slots, not entire locations
+.decl owns(Player:symbol, Location:symbol)
+owns("Player1", "Birmingham").
+owns("Player2", "Nuneaton").
+
+.decl has_unflipped_factory(Player:symbol, Location:symbol)
+has_unflipped_factory("Player1", "Birmingham").
+has_unflipped_factory("Player2", "Nuneaton").
+
+
+.decl can_consume_beer(Player:symbol, SellLocation:symbol, BeerLocation:symbol)
+can_consume_beer(player, sell_location, beer_location) :- 
+    has_unflipped_factory(player, sell_location),
+    has_beer(beer_location),
+    is_connected(sell_location, beer_location).
+can_consume_beer(player, sell_location, beer_location) :- 
+    has_unflipped_factory(player, sell_location),
+    has_beer(beer_location),
+    owns(player, beer_location).
+.output can_consume_beer(IO=stdout, delimiter="\t", headers=true)
