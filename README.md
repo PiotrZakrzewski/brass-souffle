@@ -1,7 +1,7 @@
 # Find Legal Moves in Brass Birmingham with Logic Programming
 
 This short experiment shows how easy it is to express boardgame rules with [logic programming](https://en.wikipedia.org/wiki/Logic_programming).
-This repo is a supplemnt to my [blog post](https://hashnode.com/preview/655a4aa4ba98790010ccfe60), please read it for more context.
+This repo is a supplemnt to my [blog post](https://blog.pzakrzewski.com/find-legal-moves-in-brass-birmingham-with-logic-programming), please read it for more context.
 
 ## Install Souffle
 
