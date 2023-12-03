@@ -1,0 +1,41 @@
+graph G {
+    subgraph cluster_Oxford {
+        label="Oxford";
+        style=filled;
+        color=lightgrey;
+        oxford1 [label=1];
+        oxford2 [label=2];
+    }
+
+    subgraph cluster_Birmingham {
+        label="Birmingham";
+        style=filled;
+        color=lightblue;
+        birmingham1 [label=1];
+        birmingham2 [label=2];
+        birmingham3 [label=3];
+        birmingham4 [label=4];
+
+    }
+
+    subgraph cluster_Coventry {
+        label="Coventry";
+        style=filled;
+        color=lightblue;
+        coventry1 [label=1];
+        coventry2 [label=2];
+    }
+
+    subgraph cluster_Nuneaton {
+        label="Nuneaton";
+        style=filled;
+        color=lightblue;
+        nuneaton1 [label=1];
+        nuneaton2 [label=2];
+    }
+
+    oxford1 -- birmingham1 [color=blue, label="Canal"];
+    birmingham1 -- coventry1
+    coventry1 -- nuneaton1
+
+}

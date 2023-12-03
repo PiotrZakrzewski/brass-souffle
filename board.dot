@@ -1,0 +1,356 @@
+graph G {
+subgraph cluster_uttoxeter {
+    label = "uttoxeter";
+    style=filled;
+    color=lightgrey;
+    
+    uttoxeter [label="uttoxeter"];
+
+    uttoxeter1 [label="mangoods-beer"];
+
+    uttoxeter2 [label="cotton-beer"];
+
+}
+
+
+subgraph cluster_leek {
+    label = "leek";
+    style=filled;
+    color=lightgrey;
+    
+    leek [label="leek"];
+
+    leek1 [label="cotton-mangoods"];
+
+    leek2 [label="cotton-coal"];
+
+}
+
+
+subgraph cluster_wallsall {
+    label = "wallsall";
+    style=filled;
+    color=lightgrey;
+    
+    wallsall [label="wallsall"];
+
+    wallsall1 [label="iron-mangoods"];
+
+    wallsall2 [label="mangoods-beer"];
+
+}
+
+
+subgraph cluster_coventry {
+    label = "coventry";
+    style=filled;
+    color=lightgrey;
+    
+    coventry [label="coventry"];
+
+    coventry1 [label="pottery"];
+
+    coventry2 [label="mangoods-coal"];
+
+    coventry3 [label="iron-mangoods"];
+
+}
+
+
+subgraph cluster_cannock {
+    label = "cannock";
+    style=filled;
+    color=lightgrey;
+    
+    cannock [label="cannock"];
+
+    cannock1 [label="mangoods-coal"];
+
+    cannock2 [label="coal"];
+
+}
+
+
+subgraph cluster_redditch {
+    label = "redditch";
+    style=filled;
+    color=lightgrey;
+    
+    redditch [label="redditch"];
+
+    redditch1 [label="mangoods-coal"];
+
+    redditch2 [label="iron"];
+
+}
+
+
+subgraph cluster_birmingham {
+    label = "birmingham";
+    style=filled;
+    color=lightgrey;
+    
+    birmingham [label="birmingham"];
+
+    birmingham1 [label="cotton-mangoods"];
+
+    birmingham2 [label="mangoods"];
+
+    birmingham3 [label="iron"];
+
+    birmingham4 [label="mangoods"];
+
+}
+
+
+subgraph cluster_stone {
+    label = "stone";
+    style=filled;
+    color=lightgrey;
+    
+    stone [label="stone"];
+
+    stone1 [label="cotton-beer"];
+
+    stone2 [label="mangoods-coal"];
+
+}
+
+
+subgraph cluster_tamworth {
+    label = "tamworth";
+    style=filled;
+    color=lightgrey;
+    
+    tamworth [label="tamworth"];
+
+    tamworth1 [label="cotton-coal"];
+
+    tamworth2 [label="cotton-coal"];
+
+}
+
+
+subgraph cluster_coalbrookdale {
+    label = "coalbrookdale";
+    style=filled;
+    color=lightgrey;
+    
+    coalbrookdale [label="coalbrookdale"];
+
+    coalbrookdale1 [label="iron-beer"];
+
+    coalbrookdale2 [label="iron"];
+
+    coalbrookdale3 [label="coal"];
+
+}
+
+
+subgraph cluster_stafford {
+    label = "stafford";
+    style=filled;
+    color=lightgrey;
+    
+    stafford [label="stafford"];
+
+    stafford1 [label="mangoods-beer"];
+
+    stafford2 [label="pottery"];
+
+}
+
+
+subgraph cluster_wolverhampton {
+    label = "wolverhampton";
+    style=filled;
+    color=lightgrey;
+    
+    wolverhampton [label="wolverhampton"];
+
+    wolverhampton1 [label="mangoods"];
+
+    wolverhampton2 [label="mangoods-coal"];
+
+}
+
+
+subgraph cluster_belper {
+    label = "belper";
+    style=filled;
+    color=lightgrey;
+    
+    belper [label="belper"];
+
+    belper1 [label="cotton-mangoods"];
+
+    belper2 [label="coal"];
+
+    belper3 [label="pottery"];
+
+}
+
+
+subgraph cluster_kidderminster {
+    label = "kidderminster";
+    style=filled;
+    color=lightgrey;
+    
+    kidderminster [label="kidderminster"];
+
+    kidderminster1 [label="cotton-coal"];
+
+    kidderminster2 [label="cotton"];
+
+}
+
+
+subgraph cluster_burtonOnTrent {
+    label = "burtonOnTrent";
+    style=filled;
+    color=lightgrey;
+    
+    burtonOnTrent [label="burtonOnTrent"];
+
+    burtonOnTrent1 [label="mangoods-coal"];
+
+    burtonOnTrent2 [label="beer"];
+
+}
+
+
+subgraph cluster_derby {
+    label = "derby";
+    style=filled;
+    color=lightgrey;
+    
+    derby [label="derby"];
+
+    derby1 [label="cotton-beer"];
+
+    derby2 [label="cotton-mangoods"];
+
+    derby3 [label="iron"];
+
+}
+
+
+subgraph cluster_stokeOnTrent {
+    label = "stokeOnTrent";
+    style=filled;
+    color=lightgrey;
+    
+    stokeOnTrent [label="stokeOnTrent"];
+
+    stokeOnTrent1 [label="cotton-mangoods"];
+
+    stokeOnTrent2 [label="pottery-iron"];
+
+    stokeOnTrent3 [label="mangoods"];
+
+}
+
+
+subgraph cluster_nuneaton {
+    label = "nuneaton";
+    style=filled;
+    color=lightgrey;
+    
+    nuneaton [label="nuneaton"];
+
+    nuneaton1 [label="mangoods-beer"];
+
+    nuneaton2 [label="cotton-coal"];
+
+}
+
+
+subgraph cluster_worcester {
+    label = "worcester";
+    style=filled;
+    color=lightgrey;
+    
+    worcester [label="worcester"];
+
+    worcester1 [label="cotton"];
+
+    worcester2 [label="cotton"];
+
+}
+
+
+subgraph cluster_dudley {
+    label = "dudley";
+    style=filled;
+    color=lightgrey;
+    
+    dudley [label="dudley"];
+
+    dudley1 [label="coal"];
+
+    dudley2 [label="iron"];
+
+}
+
+
+    derby -- belper [label=""];
+
+    birmingham -- worcester [label=""];
+
+    birmingham -- dudley [label=""];
+
+    birmingham -- oxford [label=""];
+
+    birmingham -- coventry [label=""];
+
+    birmingham -- wallsall [label=""];
+
+    birmingham -- tamworth [label=""];
+
+    burtonOnTrent -- wallsall [label=""];
+
+    burtonOnTrent -- tamworth [label=""];
+
+    burtonOnTrent -- stone [label=""];
+
+    burtonOnTrent -- derby [label=""];
+
+    cannock -- wallsall [label=""];
+
+    cannock -- wolverhampton [label=""];
+
+    cannock -- stafford [label=""];
+
+    coalbrookdale -- shrewsbury [label=""];
+
+    coalbrookdale -- wolverhampton [label=""];
+
+    coalbrookdale -- kidderminster [label=""];
+
+    derby -- nottingham [label=""];
+
+    dudley -- kidderminster [label=""];
+
+    dudley -- wolverhampton [label=""];
+
+    kidderminster -- worcester [label=""];
+
+    leek -- stokeOnTrent [label=""];
+
+    tamworth -- nuneaton [label=""];
+
+    redditch -- gloucester [label=""];
+
+    redditch -- oxford [label=""];
+
+    stafford -- stone [label=""];
+
+    stone -- stokeOnTrent [label=""];
+
+    stokeOnTrent -- warrington [label=""];
+
+    wolverhampton -- wallsall [label=""];
+
+    worcester -- gloucester [label=""];
+
+}

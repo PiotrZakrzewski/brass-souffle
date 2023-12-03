@@ -1,0 +1,129 @@
+{
+    "belper" : {
+        "industries" : [
+            "cotton-mangoods",
+            "coal",
+            "pottery"
+        ]
+    },
+    "derby" : {
+        "industries" : [
+            "cotton-beer",
+            "cotton-mangoods",
+            "iron"
+        ]
+    },
+    "leek" : {
+        "industries" : [
+            "cotton-mangoods",
+            "cotton-coal"
+        ]
+    },
+    "stokeOnTrent" : {
+        "industries" : [
+            "cotton-mangoods",
+            "pottery-iron",
+            "mangoods"
+        ]
+    },
+    "uttoxeter" : {
+        "industries" : [
+            "mangoods-beer",
+            "cotton-beer"
+        ]
+    },
+    "stone" : {
+        "industries" : [
+            "cotton-beer",
+            "mangoods-coal"
+        ]
+    },
+    "stafford" : {
+        "industries" : [
+            "mangoods-beer",
+            "pottery"
+        ]
+    },
+    "burtonOnTrent" : {
+        "industries" : [
+            "mangoods-coal",
+            "beer"
+        ]
+    },
+    "cannock" : {
+        "industries" : [
+            "mangoods-coal",
+            "coal"
+        ]
+    },
+    "tamworth" : {
+        "industries" : [
+            "cotton-coal",
+            "cotton-coal"
+        ]
+    },
+    "wallsall" : {
+        "industries" : [
+            "iron-mangoods",
+            "mangoods-beer"
+        ]
+    },
+    "wolverhampton" : {
+        "industries" : [
+            "mangoods",
+            "mangoods-coal"
+        ]
+    },
+    "coalbrookdale" : {
+        "industries" : [
+            "iron-beer",
+            "iron",
+            "coal"
+        ]
+    },
+    "dudley" : {
+        "industries" : [
+            "coal",
+            "iron"              
+        ]
+    },
+    "kidderminster" : {
+        "industries" : [
+            "cotton-coal",
+            "cotton"         
+        ]
+    },
+    "worcester" : {
+        "industries" : [
+            "cotton",                
+            "cotton"                
+        ]
+    },
+    "redditch" : {
+        "industries" : [
+            "mangoods-coal",
+            "iron"
+        ]
+    },
+    "birmingham" : {
+        "industries" : [
+            "cotton-mangoods",
+            "mangoods",                
+            "iron",                
+            "mangoods"              
+        ]
+    },
+    "coventry" : {
+        "industries" : [
+            "pottery",
+            "mangoods-coal",
+            "iron-mangoods"
+        ]
+    },
+    "nuneaton" : {
+        "industries" : [
+            "mangoods-beer",
+            "cotton-coal"
+        ]
+    }
+}
